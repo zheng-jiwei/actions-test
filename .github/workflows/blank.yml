@@ -25,10 +25,11 @@ jobs:
     # Setup Clojure
     - uses: action/setup-java@v1
       with:
-       java-version: '9.0.4'
-    - uses: DeLaGuardo/setup-clojure@1.0
+       java-version: 1.9
+    - uses: DeLaGuardo/setup-clojure@master
       with:
-        tools-deps: '1.10.1.469'
+         tools-deps: latest
+         lein: latest
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
       run: |
